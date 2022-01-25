@@ -85,10 +85,11 @@ curl -X GET "http://localhost:9000/endpoints?builtin=true" | jq .
 
 ==== Response
 
-There are over a dozen built-in endpoints, and some have several parameters, so the formatted JSON output of all built-in endpoints is over 300 lines long. It is listed in full in Appendix A. Below is a small excerpt of the output:
+There are over a dozen built-in endpoints, and some have several parameters, so the formatted JSON output of all built-in endpoints is over 300 lines long. It is listed in full in Appendix A. Below is a small excerpt of the output: (collapsible)
 
-.Subset of GET /endpoints output
-
+.Subset of GET /endpoints output (should be collapsible)
+[%collapsible]
+====
 [source,console]
 ----
     "GET /endpoints": {
@@ -114,7 +115,13 @@ There are over a dozen built-in endpoints, and some have several parameters, so 
         }
     }
 ----
+====
 
+.collapsible test
+[%collapsible]
+====
+gonna be collapsed
+====
 
 
 ==== Parameters
@@ -141,8 +148,7 @@ There are over a dozen built-in endpoints, and some have several parameters, so 
 
 This endpoint returns the GIT versions of all components of the system.
 
-[tabs]
-====
+
 Request::
 +
 --
@@ -151,9 +157,10 @@ Request::
 curl -X GET "http://localhost:9000/version"
 ----
 --
-Response::
-+
---
+
+.Response
+[%collapsible]
+====
 [source.wrap,console]
 ----
 {"error":"false", "message":"TigerGraph RESTPP:
@@ -178,8 +185,8 @@ blue_features        release_2.6.0_05-09-2020 5d7a4e8d806519f529274b331496d3bc78
 blue_commons         release_2.6.0_05-09-2020 432763afc49bf986aed4731e50254243d3665bc3  2019-07-30 03:34:46 -0700
 "}
 ----
---
 ====
+
 
 ==== Parameters
 
